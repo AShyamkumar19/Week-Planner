@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <fill>
+      <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0" startX="0.6325757729284691" startY="0.1439394372882265">
+         <stops>
+            <Stop>
+               <color>
+                  <Color red="0.4591812789440155" green="0.821052610874176" blue="0.6702728867530823" />
+               </color>
+            </Stop>
+            <Stop offset="1.0">
+               <color>
+                  <Color red="0.25329434871673584" green="0.7684210538864136" blue="0.5537849068641663" />
+               </color>
+            </Stop>
+         </stops>
+      </LinearGradient>
+   </fill>
+   <root>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFFAF0; -fx-border-color: #A0522D; -fx-border-width: 10;">
+         <children>
+            <Text fill="SIENNA" layoutX="104.0" layoutY="322.0" opacity="0.52" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: blur;" text="Soulful Scribbles jsndjbsd" wrappingWidth="590.8211364746094">
+               <font>
+                  <Font name="Palace Script MT" size="96.0" />
+               </font>
+               <effect>
+                  <MotionBlur angle="144.67" radius="63.0" />
+               </effect>
+            </Text>
+            <Text fill="SIENNA" layoutX="163.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: DropShadow;" text="SOULFUL SCRIBLLES">
+               <font>
+                  <Font name="Segoe Print" size="46.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" offsetX="8.0" offsetY="2.0" spread="0.46">
+                     <color>
+                        <Color red="0.6274510025978088" green="0.32156863808631897" blue="0.1764705926179886" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Text>
+            <Text layoutX="377.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loading..." />
+         </children>
+      </AnchorPane>
+   </root>
+</Scene>

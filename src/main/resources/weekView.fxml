@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #FFFAF0; -fx-border-color: #10AEB9; -fx-border-width: 10;">
+      <children>
+
+         <!-- GridPane for days -->
+         <GridPane hgap="10" layoutX="365.0" layoutY="154.0" vgap="10">
+            <!-- Sunday, Monday, Tuesday -->
+            <VBox prefHeight="200" prefWidth="200" style="-fx-background-color: #10AEB9; -fx-border-color: 000000; -fx-border-width: 3;">
+               <Text style="-fx-font-size: 20;" text="Sunday" textAlignment="CENTER" wrappingWidth="200.0" />
+               <ListView fx:id="sundayList" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FFFAF0; -fx-border-width: 10;" />
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <!-- Add tasks here -->
+            </VBox>
+            <VBox prefHeight="200" prefWidth="200" style="-fx-background-color: #10AEB9;" GridPane.columnIndex="1">
+               <Text style="-fx-font-size: 20;" text="Monday" textAlignment="CENTER" wrappingWidth="200.0" />
+               <ListView fx:id="mondayList" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FFFAF0; -fx-border-width: 10;" />
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <!-- Add tasks here -->
+            </VBox>
+            <VBox prefHeight="200" prefWidth="200" style="-fx-background-color: #10AEB9;" GridPane.columnIndex="2">
+               <Text style="-fx-font-size: 20;" text="Tuesday" textAlignment="CENTER" wrappingWidth="200.0" />
+               <ListView fx:id="tuesdayList" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FFFAF0; -fx-border-width: 10;" />
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <!-- Add tasks here -->
+            </VBox>
+
+            <!-- Wednesday, Thursday, Friday -->
+            <VBox prefHeight="200" prefWidth="200" style="-fx-background-color: #10AEB9;" GridPane.rowIndex="1">
+               <Text style="-fx-font-size: 20;" text="Wednesday" textAlignment="CENTER" wrappingWidth="200.0" />
+               <ListView fx:id="wednesdayList" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FFFAF0; -fx-border-width: 10;" />
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <!-- Add tasks here -->
+            </VBox>
+            <VBox prefHeight="200" prefWidth="200" style="-fx-background-color: #10AEB9;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <Text style="-fx-font-size: 20;" text="Thursday" textAlignment="CENTER" wrappingWidth="200.0" />
+               <ListView fx:id="thursdayList" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FFFAF0; -fx-border-width: 10;" />
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <!-- Add tasks here -->
+            </VBox>
+            <VBox prefHeight="200" prefWidth="200" style="-fx-background-color: #10AEB9;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <Text style="-fx-font-size: 20;" text="Friday" textAlignment="CENTER" wrappingWidth="200.0" />
+               <ListView fx:id="fridayList" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FFFAF0; -fx-border-width: 10;" />
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <!-- Add tasks here -->
+            </VBox>
+
+            <!-- Note section -->
+            <VBox prefHeight="200" prefWidth="200" style="-fx-background-color: #ffd5c2;" GridPane.columnSpan="1" GridPane.rowIndex="2">
+               <Text style="-fx-font-size: 20;" text="Notes" textAlignment="CENTER" wrappingWidth="200.0" />
+               <TextArea fx:id="notesField" prefHeight="200.0" prefWidth="200.0" />
+               <effect>
+                  <InnerShadow>
+                     <color>
+                        <Color red="1.0" green="0.45185184478759766" blue="0.45185184478759766" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+               <!-- Add note field here -->
+            </VBox>
+
+            <!-- Saturday -->
+            <VBox prefHeight="200" prefWidth="200" style="-fx-background-color: #10AEB9;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <Text style="-fx-font-size: 20;" text="Saturday" textAlignment="CENTER" wrappingWidth="200.0" />
+               <ListView fx:id="saturdayList" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FFFAF0; -fx-border-width: 10;" />
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <!-- Add tasks here -->
+            </VBox>
+
+            <!-- Quotes -->
+            <VBox prefHeight="200" prefWidth="200" style="-fx-background-color: #ffd5c2;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <Text style="-fx-font-size: 20;" text="Quotes" textAlignment="CENTER" wrappingWidth="200.0" />
+               <TextArea fx:id="quotesField" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FFFAF0; -fx-border-width: 10;" />
+               <effect>
+                  <InnerShadow>
+                     <color>
+                        <Color red="1.0" green="0.6962962746620178" blue="0.6962962746620178" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+               <!-- Add quote field here -->
+            </VBox>
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+
+         </GridPane>
+         <Button fx:id="saveButton" alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="46.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="101.0" style="-fx-background-color: EFA4A2;" text="Save" textAlignment="CENTER" textOverrun="CLIP">
+            <font>
+               <Font name="Rockwell" size="12.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+         <Text fill="#10aeb9" layoutX="311.0" layoutY="91.0" opacity="0.52" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: blur;" text="Soulful sjhssd" wrappingWidth="419.087890625">
+            <font>
+               <Font name="Palace Script MT" size="100.0" />
+            </font>
+            <effect>
+               <MotionBlur angle="144.67" radius="63.0" />
+            </effect>
+         </Text>
+         <Text fx:id="weekTitleFxml" fill="#10aeb9" layoutX="338.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: DropShadow;" text="Week Name" textAlignment="CENTER" wrappingWidth="338.3268737792969">
+            <font>
+               <Font name="Segoe Print" size="46.0" />
+            </font>
+            <effect>
+               <DropShadow blurType="GAUSSIAN" offsetX="8.0" offsetY="2.0" spread="0.46">
+                  <color>
+                     <Color red="1.0" green="0.8352941274642944" blue="0.7607843279838562" />
+                  </color>
+               </DropShadow>
+            </effect>
+         </Text>
+         <Button fx:id="createTodo" alignment="CENTER" contentDisplay="CENTER" layoutX="697.0" layoutY="47.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="101.0" style="-fx-background-color: EFA4A2;" text="+ Create Todo" textAlignment="CENTER" textOverrun="CLIP">
+            <font>
+               <Font name="Rockwell" size="12.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+         <Button fx:id="deleteTodo" alignment="CENTER" contentDisplay="CENTER" layoutX="823.0" layoutY="46.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="101.0" style="-fx-background-color: EF6C5B;" text="- Delete Todo" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+            <font>
+               <Font name="Rockwell" size="12.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+         <VBox layoutX="20.0" layoutY="155.0" prefHeight="629.0" prefWidth="310.0" style="-fx-background-color: #7df0c2;">
+            <children>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: FFFAF0;" text="Quick View" textAlignment="CENTER" wrappingWidth="310.09423828125">
+                  <font>
+                     <Font name="Segoe Script" size="40.0" />
+                  </font>
+                  <effect>
+                     <InnerShadow choke="0.08" height="149.67" radius="69.655" width="130.95">
+                        <color>
+                           <Color red="1.0" green="0.9803921580314636" blue="0.9411764740943909" />
+                        </color>
+                     </InnerShadow>
+                  </effect>
+               </Text>
+               <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Double Click Task To Edit" textAlignment="CENTER" wrappingWidth="307.75390625">
+                  <font>
+                     <Font size="15.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="TWO_PASS_BOX" />
+                  </effect>
+               </Text>
+               <ListView fx:id="todoList" prefHeight="570.0" prefWidth="310.0" style="-fx-background-color: FFFAF0; -fx-border-width: 10;">
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor></ListView>
+            </children>
+            <effect>
+               <InnerShadow choke="0.72" radius="14.68" width="39.72">
+                  <color>
+                     <Color red="0.4901960790157318" green="0.9411764740943909" blue="0.7607843279838562" />
+                  </color>
+               </InnerShadow>
+            </effect>
+         </VBox>
+         <ListView fx:id="linkHouse" layoutX="194.0" layoutY="39.0" prefHeight="82.0" prefWidth="101.0" />
+         <Line endX="100.0" layoutX="194.0" layoutY="39.0" startX="48.39997863769531" startY="-27.541536331176758" />
+         <Line endX="87.69285583496094" endY="-48.24864196777344" layoutX="154.0" layoutY="59.0" startX="40.0" startY="-19.99999237060547" />
+         <Text layoutX="213.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Link House" />
+      </children></AnchorPane>
+</Scene>
